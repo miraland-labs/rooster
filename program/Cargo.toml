@@ -1,6 +1,6 @@
 [package]
 name = "rooster"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
 authors = ["Metaplex Developers <dev@metaplex.com>"]
 description = "Rooster: a simple program to test authorization rules for pNFTs."
@@ -11,7 +11,7 @@ readme = "../README.md"
 
 [dependencies]
 borsh = "0.9.3"
-miraplex-token-metadata = { version = "1.7.0-alpha", features = ["no-entrypoint"] }
+miraplex-token-metadata = { version = "1.7.0-beta", features = ["no-entrypoint"] }
 miraplex-utils = "0.0.6"
 num-derive = "0.3.3"
 num-traits = "~0.2"
