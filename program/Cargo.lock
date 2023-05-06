@@ -2690,6 +2690,18 @@ dependencies = [
 ]
 
 [[package]]
+name = "miraplex-utils"
+version = "0.0.6"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "056ae90c63bc441673cdc7ff2476efb979c813632299dcb81c5bbf39c7c0a9ca"
+dependencies = [
+ "arrayref",
+ "borsh",
+ "miraland-program",
+ "solarti-token",
+]
+
+[[package]]
 name = "modular-bitfield"
 version = "0.11.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -2738,7 +2750,7 @@ dependencies = [
  "borsh",
  "mpl-token-auth-rules",
  "mpl-token-metadata-context-derive",
- "mpl-utils 0.1.0",
+ "mpl-utils",
  "num-derive",
  "num-traits",
  "shank 0.0.11",
@@ -2756,18 +2768,6 @@ checksum = "12989bc45715b0ee91944855130131479f9c772e198a910c3eb0ea327d5bffc3"
 dependencies = [
  "quote 1.0.26",
  "syn 1.0.107",
-]
-
-[[package]]
-name = "mpl-utils"
-version = "0.0.5"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "330468b3ea93d306ed5ae5e389b0b64cfbc43fcd29a4eeae74e20f13c979e7a5"
-dependencies = [
- "arrayref",
- "borsh",
- "solana-program",
- "spl-token",
 ]
 
 [[package]]
@@ -3592,8 +3592,8 @@ dependencies = [
  "miraland-program",
  "miraland-program-test",
  "miraland-sdk",
+ "miraplex-utils",
  "mpl-token-metadata",
- "mpl-utils 0.0.5",
  "num-derive",
  "num-traits",
  "shank 0.0.10",
