@@ -5,7 +5,7 @@ edition = "2021"
 authors = ["Metaplex Developers <dev@metaplex.com>"]
 description = "Rooster: a simple program to test authorization rules for pNFTs."
 license-file = "../LICENSE"
-keywords = ["nft", "metaplex", "solana", "blockchain"]
+keywords = ["nft", "miraplex", "miraland", "blockchain"]
 repository = "https://github.com/miraland-labs/rooster"
 readme = "../README.md"
 
