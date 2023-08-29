@@ -13,7 +13,7 @@ readme = "../README.md"
 borsh = "0.9.3"
 # miraplex-token-metadata = { version = "1.7.1", features = ["no-entrypoint"] }
 miraplex-token-metadata = { path = "../../miraplex-program-library/token-metadata/program", version = "1.7.1", features = ["no-entrypoint"] }
-miraplex-utils = "0.0.9"
+miraplex-utils = "=0.0.9"
 num-derive = "0.3.3"
 num-traits = "~0.2"
 shank = "0.0.10"
