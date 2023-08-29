@@ -1,5 +1,5 @@
 [package]
-name = "rooster"
+name = "mirplex-rooster"
 version = "0.1.4"
 edition = "2021"
 authors = ["Metaplex Developers <dev@metaplex.com>"]
