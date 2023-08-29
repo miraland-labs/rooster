@@ -1,6 +1,6 @@
 [package]
 name = "rooster"
-version = "0.1.3"
+version = "0.1.4"
 edition = "2021"
 authors = ["Metaplex Developers <dev@metaplex.com>"]
 description = "Rooster: a simple program to test authorization rules for pNFTs."
@@ -12,11 +12,11 @@ readme = "../README.md"
 [dependencies]
 borsh = "0.9.3"
 miraplex-token-metadata = { version = "1.7.1", features = ["no-entrypoint"] }
-miraplex-utils = "0.0.9"
+miraplex-utils = "0.0.10"
 num-derive = "0.3.3"
 num-traits = "~0.2"
 shank = "0.0.10"
-miraland-program = "1.14.17-rc5"
+miraland-program = "1.14.17-rc6"
 thiserror = "~1.0"
 toml_datetime = "=0.6.1"
 
@@ -26,9 +26,9 @@ test-bpf = []
 
 [dev-dependencies]
 assert_matches = "1.5.0"
-miraland-program-test = "1.14.17-rc5"
-miraland-sdk = "1.14.17-rc5"
-miraland-logger = "1.14.17-rc5"
+miraland-program-test = "1.14.17-rc6"
+miraland-sdk = "1.14.17-rc6"
+miraland-logger = "1.14.17-rc6"
 
 [lib]
 crate-type = ["cdylib", "lib"]
