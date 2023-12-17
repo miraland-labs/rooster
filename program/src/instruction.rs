@@ -172,7 +172,7 @@ pub fn init(authority: Pubkey, rooster_pda: Pubkey) -> Instruction {
             AccountMeta::new(rooster_pda, false),
             AccountMeta::new_readonly(solana_program::system_program::id(), false),
         ],
-        data: RoosterCommand::Init.try_to_vec().unwrap(),
+        data: borsh::to_vec(&RoosterCommand::Init).unwrap(),
     }
 }
 
@@ -213,7 +213,7 @@ pub fn withdraw(
             AccountMeta::new_readonly(MPL_TOKEN_AUTH_RULES_PROGRAM_ID, false),
             AccountMeta::new_readonly(rule_set, false),
         ],
-        data: RoosterCommand::Withdraw(args).try_to_vec().unwrap(),
+        data: borsh::to_vec(&RoosterCommand::Withdraw(args)).unwrap(),
     }
 }
 
@@ -250,7 +250,7 @@ pub fn delegate(
                 false,
             ),
         ],
-        data: RoosterCommand::Delegate(args).try_to_vec().unwrap(),
+        data: borsh::to_vec(&RoosterCommand::Delegate(args)).unwrap(),
     }
 }
 
@@ -280,7 +280,7 @@ pub fn lock(
             AccountMeta::new_readonly(MPL_TOKEN_AUTH_RULES_PROGRAM_ID, false),
             AccountMeta::new_readonly(mpl_token_metadata::ID, false),
         ],
-        data: RoosterCommand::Lock(args).try_to_vec().unwrap(),
+        data: borsh::to_vec(&RoosterCommand::Lock(args)).unwrap(),
     }
 }
 
@@ -310,7 +310,7 @@ pub fn unlock(
             AccountMeta::new_readonly(MPL_TOKEN_AUTH_RULES_PROGRAM_ID, false),
             AccountMeta::new_readonly(mpl_token_metadata::ID, false),
         ],
-        data: RoosterCommand::Unlock(args).try_to_vec().unwrap(),
+        data: borsh::to_vec(&RoosterCommand::Unlock(args)).unwrap(),
     }
 }
 
@@ -347,7 +347,7 @@ pub fn programmable_lock(
                 false,
             ),
         ],
-        data: RoosterCommand::ProgrammableLock(args).try_to_vec().unwrap(),
+        data: borsh::to_vec(&RoosterCommand::ProgrammableLock(args)).unwrap(),
     }
 }
 
@@ -384,8 +384,7 @@ pub fn programmable_unlock(
                 false,
             ),
         ],
-        data: RoosterCommand::ProgrammableUnlock(args)
-            .try_to_vec()
+        data: borsh::to_vec(&RoosterCommand::ProgrammableUnlock(args))
             .unwrap(),
     }
 }
@@ -429,6 +428,6 @@ pub fn delegate_transfer(
             AccountMeta::new_readonly(MPL_TOKEN_AUTH_RULES_PROGRAM_ID, false),
             AccountMeta::new_readonly(rule_set, false),
         ],
-        data: RoosterCommand::DelegateTransfer(args).try_to_vec().unwrap(),
+        data: borsh::to_vec(&RoosterCommand::DelegateTransfer(args)).unwrap(),
     }
 }

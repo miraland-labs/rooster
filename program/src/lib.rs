@@ -1,5 +1,5 @@
 use crate::{error::Crows, instruction::RoosterCommand};
-use borsh::{BorshDeserialize, BorshSerialize};
+use borsh::BorshDeserialize;
 use mpl_token_metadata::instruction::{
     builders::TransferBuilder, InstructionBuilder, TransferArgs,
 };

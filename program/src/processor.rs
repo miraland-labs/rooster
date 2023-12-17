@@ -48,7 +48,7 @@ fn init(program_id: &Pubkey, accounts: &[AccountInfo]) -> ProgramResult {
     let rooster = Rooster::new(bump);
     let rooster_signer_seeds = &[b"rooster", authority_info.key.as_ref(), &[bump]];
 
-    let serialized_rooster = rooster.try_to_vec()?;
+    let serialized_rooster = borsh::to_vec(&rooster)?;
     let data_len = serialized_rooster.len();
 
     mpl_utils::create_or_allocate_account_raw(
